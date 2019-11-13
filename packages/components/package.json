@@ -29,17 +29,13 @@
     "lint:fix": "yarn lint:style --fix",
     "lint:types": "tsc --noEmit",
     "lint:style": "tslint -c tslint.json -p . \"src/**/*.{tsx,ts,css,json}\" \"!src/**/*.d.ts\"",
-    "lint:format": "prettier --list-different \"src/**/*.{tsx,ts,css,json}\" \"!src/**/*.d.ts\"",
-    "docs": "cd ./docs && jekyll serve",
-    "watch:build": "node ./scripts/watch-build.js",
-    "start:docs": "sd concurrent \"yarn watch:build\" \"yarn docs\""
+    "lint:format": "prettier --list-different \"src/**/*.{tsx,ts,css,json}\" \"!src/**/*.d.ts\""
   },
   "devDependencies": {
     "@stencil/core": "1.0.5",
     "@stencil/utils": "0.0.5",
     "@types/jest": "24.0.15",
     "@types/puppeteer": "1.12.4",
-    "chokidar": "^3.2.2",
     "jest": "24.8.0",
     "jest-cli": "24.8.0",
     "prettier": "^1.18.2",

@@ -12,9 +12,13 @@
         "clean": "./scripts/clean.sh",
         "build": "./scripts/build.sh",
         "build:components": "yarn workspace @telements/components build",
-        "watch:components": "yarn workspace @telements/components start"
+        "watch:components": "yarn workspace @telements/components start",
+        "docs": "cd ./docs && jekyll serve",
+        "watch:build": "node ./scripts/watch-build.js",
+        "start:docs": "sd concurrent \"yarn watch:build\" \"yarn docs\""
     },
     "devDependencies": {
-        "rimraf": "2.6.3"
+        "rimraf": "2.6.3",
+        "chokidar": "^3.2.2"
     }
 }
